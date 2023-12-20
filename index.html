@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Image Editor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    
+    <main>
+        <div class="container disabled">
+            <h1 class="mb-2 text-capitalize">simple image editor</h1>
+            <div class="wrapper mb-2">
+                <div class="edit">
+                    <div class="filters">
+                        <p class="mb-1 text-capitalize pl-10 fs-24">filters</p>
+                        <div class="filter-options mb-2">
+                            <button class="active" id="brightness">brightness</button>
+                            <button id="saturation">saturation</button>
+                            <button id="inversion">inversion</button>
+                            <button id="grayscale">grayscale</button>
+                            <button id="blur">blur</button>
+                            <button id="contrast">contrast</button>
+                        </div>
+                        <div class="slider mb-2 pl-10">
+                            <div class="filter-value text-capitalize mb-1">
+                                <p class="filter-name">brightness</p>
+                                <p class="filter-prc">100%</p>
+                            </div>
+                            <input type="range" value="100" min="0" max="200" class="w-100 slider-value">
+                        </div>
+                    </div>
+                    <div class="rotation pl-10">
+                        <p class="text-capitalize mb-2 fs-24">rotate & flip</p>
+                        <div class="rotate-options">
+                            <button id="rotateLeft"><i class="fa-solid fa-rotate-left"></i></button>
+                            <button id="rotateRight"><i class="fa-solid fa-rotate-right"></i></button>
+                            <button id="flipHorizontal"><i class='bx bx-reflect-vertical' ></i></button>
+                            <button id="flipVertical"><i class='bx bx-reflect-horizontal'></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="img-panel">
+                    <img src="imgs/image-placeholder.svg" alt="Image placeholder" class="w-100"/>
+                </div>
+            </div>
+            <div class="main-btns">
+                <div class="left-btns">
+                    <button id="resetbtn">reset all filters</button>
+                </div>
+                <div class="choose-btn">
+                    <input type="file" accept="image/*" id="upload" hidden>
+                </div>
+                <div class="right-btns">
+                    <button class="upload-btn">upload image</button>
+                    <button class="save-btn">save image</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+    <script src="js/all.min.js"></script>
+</body>
+
+</html>
